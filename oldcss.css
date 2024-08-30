@@ -1,0 +1,674 @@
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Added for the glowing effect */
+    overflow: hidden; /* Added for the glowing effect */
+    color: #ffffff; /* White text color */
+  }
+  
+  header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: glowingOutside 3s ease infinite; /* Added for the glowing effect */
+  }
+  
+  @keyframes glowingOutside {
+    0% {
+        width: 200%;
+        height: 200%;
+        opacity: 0.5;
+    }
+    100% {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
+  }
+  
+  header a img {
+    width: 150px;
+    height: 75px;
+    animation: glowing 1.5s infinite;
+  }
+  
+  @keyframes glowing {
+    0% { box-shadow: 0 0 5px gold; }
+    50% { box-shadow: 0 0 20px gold; }
+    100% { box-shadow: 0 0 5px gold; }
+  }
+  
+  /* Container styles */
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  /* Welcome message styles */
+  
+  /* Welcome message styles */
+  
+  .welcome {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  @keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700;
+    }
+    10% {
+        text-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700, 0 0 18px #ffd700, 0 0 24px #ffd700, 0 0 30px #ffd700, 0 0 36px #ffd700, 0 0 42px #ffd700;
+    }
+    20% {
+        text-shadow: 0 0 7px #ffd700, 0 0 14px #ffd700, 0 0 21px #ffd700, 0 0 28px #ffd700, 0 0 35px #ffd700, 0 0 42px #ffd700, 0 0 49px #ffd700;
+    }
+    30% {
+        text-shadow: 0 0 8px #ffd700, 0 0 16px #ffd700, 0 0 24px #ffd700, 0 0 32px #ffd700, 0 0 40px #ffd700, 0 0 48px #ffd700, 0 0 56px #ffd700;
+    }
+    40% {
+        text-shadow: 0 0 9px #ffd700, 0 0 18px #ffd700, 0 0 27px #ffd700, 0 0 36px #ffd700, 0 0 45px #ffd700, 0 0 54px #ffd700, 0 0 63px #ffd700;
+    }
+    50% {
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700, 0 0 60px #ffd700, 0 0 70px #ffd700;
+    }
+    60% {
+        text-shadow: 0 0 9px #ffd700, 0 0 18px #ffd700, 0 0 27px #ffd700, 0 0 36px #ffd700, 0 0 45px #ffd700, 0 0 54px #ffd700, 0 0 63px #ffd700;
+    }
+    70% {
+        text-shadow: 0 0 8px #ffd700, 0 0 16px #ffd700, 0 0 24px #ffd700, 0 0 32px #ffd700, 0 0 40px #ffd700, 0 0 48px #ffd700, 0 0 56px #ffd700;
+    }
+    80% {
+        text-shadow: 0 0 7px #ffd700, 0 0 14px #ffd700, 0 0 21px #ffd700, 0 0 28px #ffd700, 0 0 35px #ffd700, 0 0 42px #ffd700, 0 0 49px #ffd700;
+    }
+    90% {
+        text-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700, 0 0 18px #ffd700, 0 0 24px #ffd700, 0 0 30px #ffd700, 0 0 36px #ffd700, 0 0 42px #ffd700;
+    }
+    100% {
+        text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700, 0 0 30px #ffd700, 0 0 35px #ffd700;
+    }
+  }
+  
+  .glow {
+    font-size: 40px;
+    color: #fff;
+    -webkit-animation: glow 4s ease-in-out infinite alternate;
+    -moz-animation: glow 4s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite alternate;
+    font-family: 'Nasalization', sans-serif;
+    
+  }
+  
+  .glow:hover {
+    color: #333;
+    transition: 0.7s;
+  }
+  
+  .welcome {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  
+  
+  
+  /* Box container styles */
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  
+  /* Box styles */
+  .box {
+    flex: 1;
+    width: 200px; /* Set a fixed width and height to make the boxes square */
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Add display: flex to align items vertically */
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a white glow effect */
+    background-color: #333; /* Darken the background color on hover */
+  }
+  
+  .box:hover * {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a shining effect to the texts */
+  }
+  
+  /* Style for the h2 and a tags inside the box */
+  .box h2,.box a {
+    margin: 0; /* Remove default margin */
+    text-decoration: none;
+  }
+  
+  .box h2 {
+    font-size: 24px; /* Adjust font size */
+    text-decoration: none;
+    
+  }
+  
+  .box a {
+    font-size: 18px; /* Adjust font size */
+    text-decoration: none; /* Remove default underline */
+    color: #fff; /* Set text color to white */
+  }
+  
+  .box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .box.active { /* Added for active state */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .box:active {
+    background-color: #333;
+  }
+  
+  .box h2 {
+    margin: 0;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .box.qna h2 {
+    color: #ff4081;
+  }
+  
+  .box.science h2 {
+    color: #00bcd4;
+  }
+  
+  .box.news h2 {
+    text-decoration: none;
+    color: #ffeb3b;
+  }
+  
+  .box:hover.qna h2,
+  .box.qna.active h2 { /* Added for Q&A box */
+    color: #ff80ab;
+  }
+  
+  .box:hover.science h2 {
+    color: #40c4ff;
+  }
+  
+  .box:hover.news h2 {
+    color: #ffeb3b;
+  }
+  
+  /* Sub-container styles */
+  .sub-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sub-container .box {
+    width: 60%;
+    margin: 10px 0;
+  }
+  
+  /* Back button styles */
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #e91e63;
+  }
+  
+  /* Custom cursor styles */
+  .custom-cursor {
+    position: absolute;
+    width: 15px; /* Adjust the size */
+    height: 15px; /* Adjust the size */
+    border-radius: 50%;
+    background-color: pink;
+    pointer-events: none;
+    transition: transform 0.1s, box-shadow 0.2s;
+  }
+  
+  .custom-cursor.active {
+    transform: scale(2);
+    box-shadow: 0 0 15px pink;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff; /* White text color */
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  footer a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Link styles */
+  .site-link {
+    color: #ff4081; /* Changing the link color */
+    text-decoration: underline; /* Adding underline for link indication */
+  }
+  
+  /* Increased contrast for link hover state */
+  .site-link:hover {
+    color: #6db8f9; /* Light blue color */
+  }
+  
+  /* Improved contrast for text */
+  body {
+    color: #ffffff; /* White text color */
+  }
+  
+  .lang.english .flip-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .lang.bangla .flip-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  h2 {
+    text-decoration: none;
+  }
+  
+  
+  
+  .lang.english:hover h2 {
+    text-decoration: underline;
+    opacity: 0;
+  }
+  
+  .lang.bangla:hover h2 {
+    opacity: 0;
+  }
+  
+  .lang.english {
+    position: relative;
+  }
+  
+  .lang.english:hover h2 {
+    opacity: 0;
+  }
+  
+  .lang.english:hover.hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lang.english.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  .lang.bangla {
+    position: relative;
+  }
+  
+  .lang.bangla:hover h2 {
+    opacity: 0;
+  }
+  
+  .lang.bangla:hover.hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lang.bangla.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  
+  /* Box styles */
+  .box {
+    /* ... */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  .box:hover h2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .box.qna:hover {
+    background-color: #ff4081;
+  }
+  
+  .box.qna:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+  
+  }
+  
+  .box.science:hover {
+    background-color: #00bcd4;
+  }
+  
+  .box.science:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .box.news:hover {
+    background-color: #ffeb3b;
+  }
+  
+  .box.news:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Hover text styles */
+  .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .box:hover img {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .facebook-box {
+    background-color: #1e1e1e; /* Black color */
+    padding: 20px;
+    display: flex; /* Add flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 10px; /* Add a rounded corner effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+    position: relative; /* Make the hover text visible */
+    width: 170px; /* Set the box width to 150px */
+    height: 80px; /* Set the box height to 70px */
+    margin: 0 auto; /* Center the box horizontally */
+    transition: background-color 0.3s; /* Add a transition effect for the background color */
+    margin-bottom: 50px;
+    transition: 0.3s;
+  }
+  
+  .facebook-box:hover {
+    background-color: #1479de; /* Facebook blue color on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.5); /* Increase the spread radius of the white glow effect */
+    transition: 0.3s;
+    color: black;
+    
+  }
+  
+  
+  .facebook-box .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .facebook-box img {
+    width: 50px; /* Set the icon width */
+    height: auto; /* Set the icon height to auto */
+    margin: 0 auto; /* Center align the icon */
+    display: block; /* Make the icon a block element to center it */
+    transition: opacity 0.3s; /* Add a transition effect for the opacity */
+  }
+  
+  .facebook-box .follow-text {
+    font-size: 18px; /* Set the font size for the "Follow Us" text */
+    color: #ffffff; /* Set the text color to white */
+    text-decoration: none; /* Remove any text decoration */
+    margin-top: 10px; /* Add some space between the icon and the text */
+    transition: opacity 0.3s; /* Add a transition effect for the opacity */
+  }
+  
+  .facebook-box:hover .content {
+    opacity: 0; /* Hide the icon and "Follow Us" text on hover */
+    transition: 0.2s;
+  }
+  
+  .facebook-box:hover::after {
+    content: "Follow Bidibo's Science Hub on Facebook";
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .box.qna {
+    width: 200px;
+    height: 200px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  
+  .box.qna img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  .box.science {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .box.science img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .box.news {
+    width: 200px;
+    height: 200px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .box.news img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .hover-text {
+    font-size: 25px;
+  }
+  
+  .nabillogo {
+    color: #00bcd4;
+  }
+  
+  .nabillogo:hover {
+    color: #e91e63;
+    transition: 0.3s;
+  }
+  
+  .bidibonews {
+    color: yellow;
+  
+  }
+  .bidibonews:hover {
+    color: rgb(0, 157, 255);
+    transition: 0.3s;
+  }
+  
+  .footerlink {
+    text-decoration: none;
+    color: #ff4081;
+  }
+  
+  .footerlink:hover {
+    color: #6db8f9;
+    transition: 0.3s;
+  }

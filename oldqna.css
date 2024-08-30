@@ -1,0 +1,467 @@
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  h1 {
+    align-content: center;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Added for the glowing effect */
+    overflow: hidden; /* Added for the glowing effect */
+    color: #ffffff; /* White text color */
+  }
+  
+  header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: glowingOutside 3s ease infinite; /* Added for the glowing effect */
+  }
+  
+  @keyframes glowingOutside {
+    0% {
+        width: 200%;
+        height: 200%;
+        opacity: 0.5;
+    }
+    100% {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
+  }
+  
+  header a img {
+    width: 150px;
+    height: 75px;
+    animation: glowing 1.5s infinite;
+  }
+  
+  @keyframes glowing {
+    0% { box-shadow: 0 0 5px gold; }
+    50% { box-shadow: 0 0 20px gold; }
+    100% { box-shadow: 0 0 5px gold; }
+  }
+  
+  /* Container styles */
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  /* Welcome message styles */
+  .welcome {
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+    color: #00bcd4;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Box container styles */
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+  }
+  
+  /* Box styles */
+  .box {
+    flex: 1;
+    width: 200px; /* Set a fixed width and height to make the boxes square */
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Add display: flex to align items vertically */
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add a white glow effect */
+    background-color: #333; /* Darken the background color on hover */
+  }
+  
+  .box:hover * {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a shining effect to the texts */
+  }
+  
+  /* Style for the h2 and a tags inside the box */
+  .box h2,.box a {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .box h2 {
+    font-size: 24px; /* Adjust font size */
+  }
+  
+  .box a {
+    font-size: 18px; /* Adjust font size */
+    text-decoration: none; /* Remove default underline */
+    color: #fff; /* Set text color to white */
+  }
+  
+  .box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .box.active { /* Added for active state */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .box:active {
+    background-color: #333;
+  }
+  
+  .box h2 {
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .box.qna h2 {
+    color: #ff4081;
+  }
+  
+  .box.science h2 {
+    color: #00bcd4;
+  }
+  
+  .box.news h2 {
+    color: #ffeb3b;
+  }
+  
+  .box:hover.qna h2,
+  .box.qna.active h2 { /* Added for Q&A box */
+    color: #ff80ab;
+  }
+  
+  .box:hover.science h2 {
+    color: #40c4ff;
+  }
+  
+  .box:hover.news h2 {
+    color: #ffeb3b;
+  }
+  
+  /* Sub-container styles */
+  .sub-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sub-container .box {
+    width: 60%;
+    margin: 10px 0;
+  }
+  
+  /* Back button styles */
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #e91e63;
+  }
+  
+  /* Custom cursor styles */
+  .custom-cursor {
+    position: absolute;
+    width: 15px; /* Adjust the size */
+    height: 15px; /* Adjust the size */
+    border-radius: 50%;
+    background-color: pink;
+    pointer-events: none;
+    transition: transform 0.1s, box-shadow 0.2s;
+  }
+  
+  .custom-cursor.active {
+    transform: scale(2);
+    box-shadow: 0 0 15px pink;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff; /* White text color */
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  footer a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Link styles */
+  .site-link {
+    color: #ff4081; /* Changing the link color */
+    text-decoration: underline; /* Adding underline for link indication */
+  }
+  
+  /* Increased contrast for link hover state */
+  .site-link:hover {
+    color: #6db8f9; /* Light blue color */
+  }
+  
+  /* Improved contrast for text */
+  body {
+    color: #ffffff; /* White text color */
+  }
+  
+  .lang.english {
+    position: relative;
+  }
+  
+  .lang.english:hover h2 {
+    opacity: 0;
+  }
+  
+  .lang.english:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lang.english .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    text-align: center; /* Add this line */
+    width: 100%; /* Add this line to make the text center horizontally */
+  }
+  
+  .lang.bangla {
+    position: relative;
+  }
+  
+  .lang.bangla:hover h2 {
+    opacity: 0;
+  }
+  
+  .lang.bangla:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lang.bangla .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    text-align: center; /* Add this line */
+    width: 100%; /* Add this line to make the text center horizontally */
+  }
+  
+  .lang.english:hover {
+    background-color: #ff69b4; /* Pink color */
+  }
+  
+  .lang.bangla:hover {
+    background-color: #34c759; /* Green color */
+  }
+
+
+
+  .lang.english {
+    animation: glowingPink 3s ease infinite; /* Add animation for pink glow effect */
+  }
+  
+  .lang.bangla {
+    animation: glowingGreen 3s ease infinite; /* Add animation for green glow effect */
+  }
+  
+  @keyframes glowingPink {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+  }
+  
+  @keyframes glowingGreen {
+    0% {
+      box-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(52, 199, 89, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+    }
+  }
+
+  .lang.english {
+    animation: glowingPink 3s ease infinite; /* Add animation for pink glow effect */
+  }
+  
+  .lang.bangla {
+    animation: glowingGreen 3s ease infinite; /* Add animation for green glow effect */
+  }
+  
+  .lang.english:hover {
+    animation: glowingPinkFast 1s ease infinite; /* Add fast animation for pink glow effect on hover */
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.8); /* Increase glow area on hover */
+  }
+  
+  .lang.bangla:hover {
+    animation: glowingGreenFast 1s ease infinite; /* Add fast animation for green glow effect on hover */
+    box-shadow: 0 0 30px rgba(52, 199, 89, 0.8); /* Increase glow area on hover */
+  }
+  
+  @keyframes glowingPink {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+  }
+  
+  @keyframes glowingGreen {
+    0% {
+      box-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(52, 199, 89, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+    }
+  }
+  
+  @keyframes glowingPinkFast {
+    0% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 105, 180, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+    }
+  }
+  
+  @keyframes glowingGreenFast {
+    0% {
+      box-shadow: 0 0 20px rgba(52, 199, 89, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(52, 199, 89, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(52, 199, 89, 0.8);
+    }
+  }
+
+  .back-button {
+    display: block; /* Ensures button is block-level */
+    width: fit-content; /* Sets width to fit content */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Change to relative positioning */
+    top: 20px; /* Adjust the distance from the top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    animation: glowingRed 3s ease infinite; /* Add animation for red glow effect */
+  }
+  
+  .back-button:hover {
+    background-color: #ec1010; /* Darken background color on hover */
+    animation: glowingPinkFast 3s ease infinite; 
+    font-weight: bold;
+
+    transition: 0.5s;
+  }
+  
+  @keyframes glowingRed {
+    0% {
+      box-shadow: 0 0 10px rgba(251, 47, 115, 0.8);
+    }
+
+    25% {
+        box-shadow: 0 0 20px rgba(251, 38, 109, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(250, 30, 103, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(253, 39, 110, 0.8);
+    }
+  }
+  
